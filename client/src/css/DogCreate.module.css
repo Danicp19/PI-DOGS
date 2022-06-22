@@ -1,0 +1,157 @@
+.container {
+    
+    display:flex;
+     justify-content: center;  
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.form {
+
+  width: 800px;  
+  display:flex;
+  justify-content: center;
+  
+  background: #A8BF56;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+
+  border: 3px solid #92A649;
+  box-shadow:4px 3px 6px 2px #a8bf5687;
+}
+/* h3{
+    margin: 0px;
+    color: #fff;
+} */
+.select{
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 10px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 2px solid #92A649;
+    height: 35px;
+    background-color:#F2F2F2;
+    cursor:grab;
+    border-radius: 8px;
+    margin:15px 5px 15px 5px;
+    /* margin-bottom: 10px; */
+    
+  }
+.msgarea{
+    display:flex;
+    flex-direction: column;
+    order: 2;
+}
+
+.msgarea > textarea {
+    flex: 1;
+    /* min-width: 18em; */
+    background: transparent;
+    color: #000300;
+    padding: 15px;
+    border: 2px solid #92A649;
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.data {
+    /* flex: 1;
+    order: 1; */
+    margin-right: 20px;
+}
+
+.data input {
+    width: 100%;
+    background: transparent; 
+    border: 2px solid #92A649;
+}
+.data input,
+
+label {
+    color: #000300; 
+    line-height: 30px;
+    border-radius: 8px;
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 10px;
+    
+}
+
+/* ul {
+    color: #fff;
+}
+
+
+ul {
+    list-style-type: none;
+}
+ */
+
+
+.hh{
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 10px;
+    background-color:#8C4C35;;
+    color: #F2F2F2;
+    cursor: pointer;
+    text-align: center;
+    padding: 0px 5px;
+    border-radius: 8px;
+    transition-duration: 0.5s;
+    height: 24px;
+    text-align: center;
+
+}
+.option{
+
+    display:flex;
+    justify-content: center;  
+
+}
+
+
+.button2 {
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 10px;
+    background-color:#8C4C35;;
+    color: #F2F2F2;
+    cursor: pointer;
+    text-align: center;
+    padding: 0px 30px;
+    border-radius: 8px;
+    transition-duration: 0.5s;
+    height: 40px;
+    text-align: center;
+}
+.button2:hover {
+    background-color:#a74b2a;
+    color: #000300; 
+}
+.button {
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 10px;
+    background-color:#8C4C35;;
+    color: #F2F2F2;
+    cursor: pointer;
+    text-align: center;
+    padding: 0px 20px;
+    border-radius: 8px;
+    transition-duration: 0.5s;
+    height: 40px;
+    text-align: center;
+    margin-top: 10px;
+
+
+
+}
+.button:hover {
+    background-color:#a74b2a;
+    color: #000300; 
+}
+.error {
+    font-size: small;
+    color:yellow
+}

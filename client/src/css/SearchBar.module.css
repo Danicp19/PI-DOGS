@@ -1,0 +1,37 @@
+
+.bar {
+   
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    /* background-color:#8C4C35; */
+    border: 2px solid  #8C4C35;
+    color: #8C4C35;
+    cursor: pointer;
+    text-align: center;
+    padding: 0px 15px;
+    border-left: transparent;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition-duration: 0.5s;
+    height: 50px;
+}
+.button:hover {
+    background-color:#a74b2a;
+    color:  #000300; 
+}
+.input{
+    padding-left: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    border: 2px solid  #8C4C35;
+    border-right: transparent;
+    /* border-radius: 8px; */
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
