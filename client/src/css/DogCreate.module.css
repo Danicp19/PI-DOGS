@@ -1,83 +1,136 @@
 .container {
-    
-    display:flex;
+
+   display:flex;
      justify-content: center;  
-    margin-top: 50px;
+    margin-top: 20px;
     flex-direction: column;
     align-items: center;
+   
+    color:  #333333;
+    font-weight: bold;
+    font-size: 14px;
     
+    /* background:#CBC5B5;  */
 }
+/* input[type=text] {
+    width: 10%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  } */
 
+
+.title{
+    /* color:  #333333;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #ffffffb6;  ;
+    width: 540px; */
+    padding:10px 10px 30px 10px;
+    /* margin-bottom: 0px; */
+    
+} 
+.dogs{
+    justify-content: center;
+    height: 660px;
+    width: 130px;
+ background: url("./18924\ \(1\).jpeg"); 
+    display: flex;
+    background-size: 130px;
+    border-radius: 20px;
+/* background-size: 700px;  */
+/* background-image: url("") */
+}
+.two{
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFF ;
+    border-radius: 20px;
+
+    /* background-image: url("./for\ \(1\).jpeg");  */
+}
 .form {
-
-  width: 800px;  
+/* background: url("./for\ \(1\).jpeg");
+    
+    background-size: 700px; */
+  width: 300px;  
+  /* height: 750px; */
   display:flex;
-  justify-content: center;
+  justify-content: space-between;
   
-  background: #A8BF56;
+   /* background:#CBC5B5;  */
   border-radius: 10px;
   padding: 20px;
-  margin-top: 30px;
-
-  border: 3px solid #92A649;
-  box-shadow:4px 3px 6px 2px #a8bf5687;
+  /* margin-top: 30px; */
+  color:  #333333;
+  /* border: 3px solid #92A649;
+  box-shadow:4px 3px 6px 2px #a8bf5687; */
 }
 /* h3{
     margin: 0px;
     color: #fff;
 } */
+.double{
+    display: flex;
+    align-items: center;
+}
 .select{
-    font-family: 'Press Start 2P', cursive; 
-    font-size: 10px;
-    padding: 5px;
+    color:  #333333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    /* padding: 5px; */
     border-radius: 8px;
-    border: 2px solid #92A649;
+    border: 2px solid #8265E6;
     height: 35px;
-    background-color:#F2F2F2;
+    background-color: #ffffffb6;
     cursor:grab;
-    border-radius: 8px;
-    margin:15px 5px 15px 5px;
+    border-radius: 15px;
+    margin:2px 5px 2px 15px;
+    width: 100%;
+    /* 2px 5px 2px 15px; */
     /* margin-bottom: 10px; */
     
   }
-.msgarea{
-    display:flex;
-    flex-direction: column;
-    order: 2;
-}
 
-.msgarea > textarea {
-    flex: 1;
-    /* min-width: 18em; */
-    background: transparent;
-    color: #000300;
-    padding: 15px;
-    border: 2px solid #92A649;
-    font-family: 'Press Start 2P', cursive; 
-    font-size: 16px;
-    border-radius: 8px;
-}
 
-.data {
+/* .data {
     /* flex: 1;
     order: 1; */
-    margin-right: 20px;
-}
+    /* margin-right: 20px; */
+    /* display: flex;
+    
+   flex-direction: column; */
 
 .data input {
-    width: 100%;
+    /* width: 100%; */
     background: transparent; 
-    border: 2px solid #92A649;
+    border: 2px solid #8265E6;
+    
 }
-.data input,
+/* .data input, */
 
 label {
+    /* display: flex;
+    justify-content: space-between; */
     color: #000300; 
     line-height: 30px;
-    border-radius: 8px;
-    font-family: 'Press Start 2P', cursive; 
-    font-size: 10px;
+    /* border-radius: 15px; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+
+    /* width: 65px; */
+    /* padding: 12px 20px; */
+    margin: 2px 5px 2px 20px;
     
+    /* box-sizing: border-box;  */
+    
+}
+input[type=text]{
+    height: 30px;
+    width:100%;
+    border-radius: 15px;
+    margin: 2px 10px 2px 10px;
 }
 
 /* ul {
@@ -92,66 +145,99 @@ ul {
 
 
 .hh{
-    font-family: 'Press Start 2P', cursive; 
-    font-size: 10px;
-    background-color:#8C4C35;;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    background-color:#8265E6;
     color: #F2F2F2;
     cursor: pointer;
-    text-align: center;
-    padding: 0px 5px;
-    border-radius: 8px;
+    
+ padding: 0px 5px; 
+    border-radius: 12px;
     transition-duration: 0.5s;
     height: 24px;
-    text-align: center;
+    margin-left: 10px;
+    /* text-align: center; */
+    /* align-items: center; */
 
 }
 .option{
-
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
     display:flex;
     justify-content: center;  
+    align-items: center;
+    font-weight: bold;
+    padding: 0px 15px; 
 
+}
+
+
+.doubleb{
+    display: flex;
+
+    justify-content: center;
+  
 }
 
 
 .button2 {
-    font-family: 'Press Start 2P', cursive; 
-    font-size: 10px;
-    background-color:#8C4C35;;
+    /* font-family: 'Press Start 2P', cursive;  */
+    font-size: 12px;
+    background-color:#513C99;
     color: #F2F2F2;
     cursor: pointer;
     text-align: center;
-    padding: 0px 30px;
-    border-radius: 8px;
+    padding: 0px 25px;
+    border-radius: 15px;
     transition-duration: 0.5s;
     height: 40px;
     text-align: center;
+    margin:30px 15px;
+    /* padding: 14px 30px 14px 30px; */
 }
 .button2:hover {
-    background-color:#a74b2a;
-    color: #000300; 
+    background-color:#8265E6;
+    color:  #333333;
 }
 .button {
-    font-family: 'Press Start 2P', cursive; 
-    font-size: 10px;
-    background-color:#8C4C35;;
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 14px;
+    background-color:#513C99;
     color: #F2F2F2;
     cursor: pointer;
     text-align: center;
-    padding: 0px 20px;
-    border-radius: 8px;
+    padding: 0px 25px;
+    border-radius: 15px;
     transition-duration: 0.5s;
     height: 40px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 30px;
+    font-weight: bold;
 
 
 
 }
 .button:hover {
-    background-color:#a74b2a;
-    color: #000300; 
+    background-color:#8265E6;
+    color:  #333333;
 }
 .error {
     font-size: small;
-    color:yellow
-}
+    color:rgb(255, 0, 0)
+}/* .msgarea{
+    display:flex;
+    flex-direction: column;
+    order: 2;
+} */
+
+/* .msgarea > textarea {
+    flex: 1;
+    /* min-width: 18em; */
+    /* background: transparent;
+    color: #000300;
+    padding: 15px;
+    border: 2px solid #92A649;
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 16px;
+    border-radius: 8px; */

@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+html {
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  /* background-image: url("../src/css/1392697-center-1\ \(1\).jpeg"); */
+  /* background-color: #8165e65d; */
+  /* background: rgb(169,87,217); */
+/* background: linear-gradient(304deg, rgba(169,87,217,1) 24%, rgba(130,217,171,1) 49%, rgba(169,87,217,1) 73%); */
+  /* background: rgb(130,101,230); */
+/* background: linear-gradient(304deg, rgba(130,101,230,1) 24%, rgba(0,212,255,1) 50%, rgba(130,101,230,1) 73%); */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;  
+
+}

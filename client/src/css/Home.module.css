@@ -2,14 +2,18 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: 10px;
+    font-size: 12.5px;
     text-decoration: none;
+    color: #333333;
   }
  .complete {
     padding: 10px 10px 20px 10px ;
-   
+    color: #333333;
  }
-
+ 
+ .loading{
+  margin-top: 100px;
+}
   .nav {
     display:flex;
     flex-direction: row;
@@ -20,18 +24,24 @@ body {
   }  
   .filord{
     font-family: 'Roboto', sans-serif;
-    font-size: 10px;
+    font-size: 14px;
     padding: 5px;
-    border-radius: 8px;
-    border: 2px solid #C1E5F4;
+    border-radius: 15px;
+    border: 2px solid #513C99;
     height: 40px;
     background-color:#F2F2F2;
     cursor:grab;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     margin:10px 5px;
     margin-bottom: 20px;
     
   }
+  /* .filord:hover {
+    background-color:#7CD4E6;
+    color: #000300; 
+  } */
+
+
   .space{
     display:flex;
     flex-direction: row;
@@ -41,24 +51,28 @@ body {
   }
   
     .all {
-      font-family: 'Roboto', sans-serif;
-    font-size: 10px;
-    background-color:#8C4C35;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    background-color:#513C99;
     color: #F2F2F2;
     cursor: pointer;
     text-align: center;
     padding: 0px 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     transition-duration: 0.5s;
     height: 50px;
   }
   .all:hover {
-    background-color:#a74b2a;
-    color: #000300; 
+    background-color:#8265E6;
+    color:  #333333;
   }
   
   .paging {
     padding-top: 0px;
+    padding-bottom: 10px;
+    justify-content: center;
+    align-items: center;
   }
   
   .cards {
@@ -72,7 +86,7 @@ body {
   }
   .deco{
     text-decoration: none;
-  color: #000300;}
+    color: #333333;}
 
   
   

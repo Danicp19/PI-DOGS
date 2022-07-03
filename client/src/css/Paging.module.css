@@ -2,30 +2,35 @@
    
     cursor: pointer;
     margin: 2px;
-  
+    font-size: 10px;
+    padding: 0px;
+    /* align-items: center;
+    justify-content: center; */
 }
 
 .button {
   
-  border: 2px solid #30CFF2;
+  /* border: 1.5px solid #513C99; */
   display: inline-block;
   height: 18px;
-  width: 22px;
-  color:#000300; 
+  width: 20px;
+  color: #333333;; 
   background-color: #F2F2F2;
   padding-bottom:0px;
-  padding-top: 6px;
-  padding-left: 1px;
-  padding-right: 1px;
-  /* font-family: "Montserrat", sans-serif; */
-  font-family: 'Press Start 2P', cursive;
+  padding-top: 5px;
+  /* padding-left: 1px;
+  padding-right: 1px; */
+  font-family: 'Roboto', sans-serif;
   font-size: larger;
-  border-radius: 8px;
-  margin: 2px;
+  font-weight: bold;
+  box-shadow:2px 3px 7px 0px  #8265E6; 
+  border-radius: 5px; 
+   margin: 0.5px; 
   
 }
 
 .button:hover {
-    background-color: #C1E5F4;
+    background-color: #8265E6;
+    color: whitesmoke; 
 }
 

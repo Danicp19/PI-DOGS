@@ -3,37 +3,122 @@
 .container {
     
     padding: 10px;
+    transition: all .4s ease-in-out;
+    color: #333333;
+   
+}
+h2{
+    margin-top: 0%;
+    font-size:large;
+    /* width: 140px; */
+}
+.right{
+    padding-left: 4px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    width: 140px;
+    /* justify-content: center; */
+}
+.weight{
+    display:flex;
+    align-items: center;
+ 
+   
     
 }
+.weight2{
+    display:flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.temperaments{
+    /* width: 140px; */
+    /* margin-top: 10; */
+    margin-bottom: 15px;
+    /* align-items: center;
+    justify-content: center; */
+ }
+
 .card {
    
     display:flex;
     
-/* justify-content: center; */
+ justify-content: center; 
     justify-content: space-around;
     align-items: center;
-    flex-direction: column;
-    padding:10px 5px;
-    background-color:#C1E5F4;
-    height: 220px;
-    width: 250px;
+    /* flex-direction: column; */
+    padding:5px 5px;
+    /* background-color:#C1E5F4; */
+    height: 255px;
+    width: 385px;
     margin: 5px;
-    border:2px solid #000300; 
-    border-radius: 8px;
-    box-shadow:4px 3px 6px 2px #30cef269;;
+    
 
+    /* border:2px solid #000300; 
+    border-radius: 8px; */
+    /* box-shadow:4px 3px 6px 2px #30cef269; */
+
+/* height: 100vh; */
+    background: url("./1392697-center-1__1_-removebg-preview.png") ;
+    opacity: 0.9;
+     background-size: 395px;
+     
+     
+     
+ 
+     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+ 
 }
+/* .container.grow {
+   
+} */
+.container:hover {
+    cursor: pointer;
+    /* animation-name: bounce;
+    -moz-animation-name: bounce; */
+    /* transition: all .5s ease-in-out; */
+    transform: scale(1.02);
+    
+  }
 
-h5{
+ h5{
    margin: 0px; 
-}
+   
+   /* width: 140px; } */
+ }
+ h4{
+    margin: 0px; 
+    
+    /* width: 140px; } */
+  }
 
   
  .img {
     
-    height: 130px;
-    width: 230px; 
-    /* margin: 1px; */
-    border-radius: 8px;
-    border: 2px solid #F2F2F2;
+     height: 155px;
+    width: 175px; 
+     /* margin: 1px;  */
+     border-radius: 50px;
+      /* border: 2px solid #F2F2F2;    */
+      box-shadow: 0 0 15px rgb(82, 82, 82);
+      /* background: #fff; */
+     
+    /* width: 200px;
+    height: 200px; */
+     /* border: 3px solid #bbb; */
+     /* object-fit: scale-down;  */
+
+
  }
+ /* .cropped{
+    width: 180px;
+       height: 200px;
+       /* border: 3px solid #bbb; */
+       /* object-fit: cover; */
+    

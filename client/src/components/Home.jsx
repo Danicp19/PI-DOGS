@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
-import { getDogs, getTemperaments, filterCreated, filterTemperament ,orderByAlphabet,orderByWeight} from "../actions";
+import { getDogs, getTemperaments, filterCreated, filterTemperament ,orderByAlphabet,orderByWeight,} from "../actions";
 import { Link } from "react-router-dom"
 import Card from "./Card";
 import Paging from "./Paging";
@@ -59,6 +59,11 @@ export default function Home() {
         setSort(`Sort ${e.target.value}`)
     }
 
+ 
+
+
+
+
     function handleFilterTemperament(e) {
         e.preventDefault();
         setCurrentPage(1)
@@ -81,6 +86,7 @@ export default function Home() {
 
 
             </div>
+            
 
             <div className={s.space}>
            {/* <p><i class="fas fa-sort-alpha-down fa-2x"></i> */}
@@ -98,6 +104,8 @@ export default function Home() {
 
                 </select> 
 
+
+
                 {/* <i class="fas fa-plus fa-2x "></i> */}
                 <select className={s.filord} onChange={e => handleFilterCreated(e)}>
                     <option value="default">Filter</option>
@@ -114,6 +122,7 @@ export default function Home() {
                     })}
                 </select>
 
+
             </div>
             <div className={s.paging}>
                 <Paging
@@ -126,7 +135,11 @@ export default function Home() {
 
             <div className={s.cards}>
                 {/* incluir condicionalmente un elemento */}
-                {currentDogs?.length === 0 && (<div>loading</div>)}
+                {currentDogs?.length === 0 && (<div className={s.loading}>
+                    <i class="fas fa-bone fa-spin fa-3x "></i>
+                    <i class="fas fa-bone fa-spin fa-3x "></i>
+                    <i class="fas fa-bone fa-spin fa-3x "></i>
+                    </div>)}
 
                 {
                     currentDogs?.map(elm => {
@@ -135,7 +148,7 @@ export default function Home() {
                             <Link className={s.deco} to={"/home/" + elm.id}>
                                 <Card name={elm.name} img={elm.img} temperaments={elm.createdInDb ?
 
-                                    elm.temperaments.map(e => e.name).join(",") : elm.temperament}
+                                    elm.temperaments.map(e => e.name).join(", ") : elm.temperament}
 
                                     weight={elm.weight} weight2={elm.weight2} key={elm.id} />
                             </Link>
@@ -144,6 +157,7 @@ export default function Home() {
                         )
                     })
                 }
+                
             </div>
             <div className={s.paging}>
                 <Paging
@@ -152,6 +166,7 @@ export default function Home() {
                     paging={paging}
                 />
             </div>
+            
 
         </div>
     )

@@ -2,15 +2,25 @@ import axios from "axios"
 
 export function getDogs() {
   return async function (dispatch) {
-
-    var result = await axios.get('http://localhost:3001/dogs');
-
+    var result = await axios.get('/dogs');
     return dispatch({
       type: "GET_DOGS",
       payload: result.data
     })
   }
 }
+
+export function getTemperaments() {
+  return async function (dispatch) {
+    var temp = await axios.get("/temperaments", {
+    });
+    return dispatch({
+      type: "GET_TEMPERAMENTS",
+      payload: temp.data.map(elm => elm.name)
+    });
+  }
+}
+
 
 export function filterCreated(payload) {
   return {
@@ -22,19 +32,11 @@ export function filterCreated(payload) {
 
 
 
-
-export function getTemperaments() {
-  return async function (dispatch) {
-    var temp = await axios.get("http://localhost:3001/temperaments", {
-    });
-    
-    return dispatch({
-      type: "GET_TEMPERAMENTS",
-      payload: temp.data.map(elm => elm.name)
-    });
-  }
+export function clearDetail() {
+  return {
+     type: "CLEAR_DETAIL" 
+    };
 }
-
 
 
 export function filterTemperament(payload) {
@@ -57,22 +59,12 @@ export function orderByWeight(payload) {
     payload
   }
 }
-// export function getPlatforms() {
-//   return async function (dispatch) {
 
-//     var result = await axios.get('/videogames');
-
-//     return dispatch({
-//       type: "GET_PLATFORMS",
-//       payload: result.data.map(elm => elm.platforms)
-//     })
-//   }
-// }
 
 export function getDogsName(payload) {//name
   return async function (dispatch) {
     try {
-      var result = await axios.get("http://localhost:3001/dogs?name=" + payload)
+      var result = await axios.get("/dogs?name=" + payload)
       return dispatch({
         type: "GET_DOGS_NAME",
         payload: result.data
@@ -87,7 +79,7 @@ export function getDogsName(payload) {//name
 
 export function postDog(payload) {
   return async function (dispatch) {
-    var data = await axios.post('http://localhost:3001/dogs', payload)
+    var data = await axios.post('/dogs', payload)
     return data
 
   }
@@ -97,7 +89,7 @@ export function postDog(payload) {
 export function getDetail(id) {
   return async function (dispatch) {
     try {
-      var result = await axios.get("http://localhost:3001/dogs/" + id)
+      var result = await axios.get("/dogs/" + id)
       return dispatch({
         type: "GET_DOGS_DETAIL",
         payload: result.data

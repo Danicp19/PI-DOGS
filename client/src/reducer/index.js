@@ -35,13 +35,6 @@ function rootReducer(state = initialState, action) {
             }
 
 
-        // case "GET_PLATFORMS":
-        //     return {
-        //         ...state,
-        //         result: action.payload
-        //     }
-
-
         case "FILTER_CREATED":
             const allDogsFilter = state.allDogs
             const createdFilter = action.payload === "created" ? allDogsFilter.filter(elm => elm.createdInDb) : allDogsFilter.filter(elm => !elm.createdInDb)
@@ -112,6 +105,34 @@ function rootReducer(state = initialState, action) {
                 ...state,
                 dogs: weightArray
             }
+
+            case "ORDER_BY_LIFE":
+                let lifeArray = action.payload === "des" ?
+                    state.dogs.sort(function (a, b) {//
+                        if (parseInt(a.life_span) > parseInt(b.life_span)) {
+                            return 1
+                        } if (parseInt(b.life_span) > parseInt(a.life_span)) {
+                            return -1
+                        }
+                        return 0
+    
+                    }) : state.dogs.sort(function (a, b) {
+                        if (parseInt(a.life_span) > parseInt(b.life_span)) {
+                            return -1
+                        } if (parseInt(b.life_span) > parseInt(a.life_span)) {
+                            return 1
+                        }
+                        return 0
+                    })
+                return {
+                    ...state,
+                    dogs: lifeArray
+                }
+
+
+
+
+
         case "POST_DOG":
             return {
                 ...state,
@@ -122,6 +143,15 @@ function rootReducer(state = initialState, action) {
             return {
                 ...state,
                 detail: action.payload
+
+            }
+
+
+
+            case"CLEAR_DETAIL" :
+            return{
+                ...state,
+                detail: []
 
             }
         default:

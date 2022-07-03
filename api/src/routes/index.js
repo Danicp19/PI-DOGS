@@ -4,7 +4,6 @@ const axios = require("axios")
 const { API_KEY } = process.env;
 const { Dog, Temperament } = require("../db")
 
-
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
 
@@ -24,7 +23,7 @@ const getApiInfo = async () => {
             id: elm.id,
             name: elm.name,
             img: elm.image.url,
-            life_span: elm.life_span,
+            life_span: elm.life_span.split(" ").slice(0,3),//.shift(years),
             weight2: elm.weight.metric,//split("-"),//esta
             weight: elm.weight.imperial,//.split("-"),//libras
             height: elm.height.imperial,//inches
@@ -126,7 +125,6 @@ router.get('/dogs', async (req, res) => {
 
 });
 
-
 router.get("/dogs/:id", async (req, res) => {
     const { id } = req.params //destructurado
 
@@ -169,10 +167,6 @@ router.get("/dogs/:id", async (req, res) => {
 })
 
 
-
-
-
-
 router.get("/temperaments", async (req, res) => {
 
     try {
@@ -212,7 +206,7 @@ router.post('/dogs', async (req, res) => {//llega por body
         createdInDb,
 
     } = req.body
-    //temperaments = temperaments.join(",")//str
+    // temperaments = temperaments.join(" ,")//str
 
     let dogCreated = await Dog.create(
         {
