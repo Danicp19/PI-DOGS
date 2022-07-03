@@ -4,15 +4,15 @@
   font-family: "Montserrat", sans-serif;
 } */
 
-/* .background {
+.background {
     height: 100vh;
-    background: url("./game.jpeg");
+    background: url("./yes.png");
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-   */
+  
   
   .LandingButton {
    
@@ -22,8 +22,8 @@
     background:none;
       border-color: #3498db17;
       position: absolute;
-      left:34.9%;
-      top:70.5%;
+      left:37.9%;
+      top:61.5%;
       cursor: pointer;
      
     }
