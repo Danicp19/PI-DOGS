@@ -100,8 +100,8 @@ export default function DogCreate() {
             temperaments: [],
             life_span: "",
             weight1: "",//.split("-"),//libras
-            height1: "",
             weight2: "",//.split("-"),//libras
+            height1: "",
             height2: "",
         })
         history.push("/home")
@@ -152,7 +152,7 @@ export default function DogCreate() {
                             {errors.height1 && (
                                 <p className={s.error}>{errors.height1}</p>
                             )}
-                            <p>></p>
+
                             <input type="text" value={input.height2} placeholder="To...            in" name="height2" onChange={(e) => handleChange(e)} />
                             {errors.height2 && (
                                 <p className={s.error}>{errors.height2}</p>
@@ -165,7 +165,7 @@ export default function DogCreate() {
                             {errors.weight1 && (
                                 <p className={s.error}>{errors.weight1}</p>
                             )}
-                            <p>></p>
+
                             <input type="text" value={input.weight2} placeholder="To...            lb" name="weight2" onChange={(e) => handleChange(e)} />
                             {errors.weight2 && (
                                 <p className={s.error}>{errors.weight2}</p>
