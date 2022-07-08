@@ -8,7 +8,7 @@ export default function DogCreate() {
 
     const dispatch = useDispatch()
     const history = useHistory()//metodo para redirigir a la ruta que yo diga
-    const temperaments = useSelector((state) => state.temperaments)//traer los generos
+    const temperaments = useSelector((state) => state.temperaments)//traer los temperamentos
     const [errors, setErrors] = useState({})
 
     const [input, setInput] = useState({//post
@@ -83,8 +83,8 @@ export default function DogCreate() {
         if (!input.height2) { return alert('Max Height is required') }
         if (!input.weight2) { return alert('Max Weight is required') }
         if (!input.life_span) { return alert('Life span is required') }
-        if (input.height1 > input.height2) { return alert('Minimum height must be less than the maximum') }
-        if (input.weight1 > input.weight2) { return alert('Minimum weight must be less than the maximum') }
+        if (parseInt(input.height2) < parseInt(input.height1)) { return alert('Minimum height must be less than the maximum') }
+        if (parseInt(input.weight2) < parseInt(input.weight1)) { return alert('Minimum weight must be less than the maximum') }
         if (isNaN(input.height1)) { return alert('Minimum height must be a number') }
         if (isNaN(input.height2)) { return alert('Maximum height must be a number') }
         if (isNaN(input.weight1)) { return alert('Minimum weight must be a number') }
@@ -153,7 +153,7 @@ export default function DogCreate() {
                                 <p className={s.error}>{errors.height1}</p>
                             )}
 
-                            <input type="text" value={input.height2} placeholder="To...            in" name="height2" onChange={(e) => handleChange(e)} />
+                            <input type="text" value={input.height2} placeholder="To...       in" name="height2" onChange={(e) => handleChange(e)} />
                             {errors.height2 && (
                                 <p className={s.error}>{errors.height2}</p>
                             )}
@@ -166,7 +166,7 @@ export default function DogCreate() {
                                 <p className={s.error}>{errors.weight1}</p>
                             )}
 
-                            <input type="text" value={input.weight2} placeholder="To...            lb" name="weight2" onChange={(e) => handleChange(e)} />
+                            <input type="text" value={input.weight2} placeholder="To...       lb" name="weight2" onChange={(e) => handleChange(e)} />
                             {errors.weight2 && (
                                 <p className={s.error}>{errors.weight2}</p>
                             )}
@@ -219,3 +219,7 @@ export default function DogCreate() {
         </div>
     )
 }
+
+
+
+// https://media.istockphoto.com/photos/dog-watching-tv-on-the-couch-picture-id680810342?k=20&m=680810342&s=612x612&w=0&h=wQVeNcnq0CIqpGK88zA-pqmzbyK_6diiHR7kAq5PbxQ=

@@ -217,6 +217,7 @@ router.post('/dogs', async (req, res) => {//llega por body
             weight2: Math.round(weight1 * 0.453592)  + " - " + Math.round(weight2 * 0.453592),
             height: height1 + " - " + height2,
             createdInDb,
+            
         }
     )
     let temperamentsCreatedDb = await Temperament.findAll( //otra relacion que coincida con el body
