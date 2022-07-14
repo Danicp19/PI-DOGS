@@ -84,7 +84,7 @@ console.log(allDogs)
 
                 <SearchBar />
 
-
+               
             </div>
             
 
@@ -146,7 +146,9 @@ console.log(allDogs)
                         return (
 
                             <Link className={s.deco} to={"/home/" + elm.id}>
-                                <Card name={elm.name} img={elm.img} temperaments={elm.createdInDb ?
+                                <Card name={elm.name} img={elm.img} 
+                                
+                                temperaments={elm.createdInDb ?
 
                                     elm.temperaments.map(e => e.name).join(", ") : elm.temperament}
 

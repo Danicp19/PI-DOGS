@@ -89,6 +89,14 @@ export default function DogCreate() {
         if (isNaN(input.height2)) { return alert('Maximum height must be a number') }
         if (isNaN(input.weight1)) { return alert('Minimum weight must be a number') }
         if (isNaN(input.weight2)) { return alert('Maximum weight must be a number') }
+
+
+        if (parseInt(input.height1)<0) { return alert('Minimum height must be higher than 0') }
+        if (parseInt(input.height2)<0) { return alert('Maximum height must be higher than 0') }
+        if (parseInt(input.weight1)<0) { return alert('Minimum weight must be higher than 0') }
+        if (parseInt(input.weight2)<0) { return alert('Maximum weight must be higher than 0') }
+
+
         if (isNaN(input.life_span)) { return alert('Life span must be a number') }
         if (input.temperaments.length === 0) { return alert('Temperaments is required') }
 

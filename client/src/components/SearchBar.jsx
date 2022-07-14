@@ -31,6 +31,7 @@ export default function SearchBar() {
         <div className={s.bar}>
             <input className={s.input} name="name" value={name} placeholder="Dog Name..." onChange={(e) => handleInput(e)} />
             <button  className={s.button} type="submit" onClick={(e) => handleSubmit(e)}><i class="fas fa-search fa-2x"></i></button>
+            
         </div>
     )
 }

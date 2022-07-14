@@ -29,12 +29,7 @@ const getApiInfo = async () => {
             height: elm.height.imperial,//inches
             temperament: elm.temperament,
             // h:elm.weight.imperial.split("-")[0]
-            // description: elm.description,  //se necesita la ruta id: //lo que necesito
-            // released: elm.released,
-            // rating: elm.rating,
-            // platforms: elm.platforms,//.map(elm => elm) ,//por que devuelve un arreglo tambn con id ?--
-            //para los details platforms: elm.platforms.map(elm => elm.platform.name).join(", "),
-            //         genres: elm.genres.map(elm => elm.name).join(", ")
+          
 
         }
     })
@@ -48,7 +43,7 @@ const getDbInfo = async () => {
     return await Dog.findAll({
         include: {
             model: Temperament,
-            attributes: ["name"], //pra que haga la relacion si no incluyo el modelo al crear vg no me trae el vg con genre
+            attributes: ["name"], //pra que haga la relacion si no incluyo el modelo al crear 
             through: {
                 attributes: [] // comprobacion que va siempre ocultar obj anidado no deseadp de los results
             }
@@ -150,8 +145,6 @@ router.get("/dogs/:id", async (req, res) => {
                 life_span: dogDb.life_span,
                 createdInDb: true
 
-                // platforms: videogameDb.platforms,
-                // genres: videogameDb.genres.map(elm => elm.name).join(", ")
             }
             res.status(200).json(info)
 
@@ -211,7 +204,7 @@ router.post('/dogs', async (req, res) => {//llega por body
     let dogCreated = await Dog.create(
         {
             name,
-            img,
+            img:img.length===0?"https://media.istockphoto.com/photos/dog-watching-tv-on-the-couch-picture-id680810342?k=20&m=680810342&s=612x612&w=0&h=wQVeNcnq0CIqpGK88zA-pqmzbyK_6diiHR7kAq5PbxQ=":img,
             life_span,
             weight: weight1 + " - " + weight2,
             weight2: Math.round(weight1 * 0.453592)  + " - " + Math.round(weight2 * 0.453592),

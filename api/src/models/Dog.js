@@ -36,9 +36,10 @@ module.exports = (sequelize) => {
     },
     img: {
       type: DataTypes.TEXT,
-      allowNull: true,
+      defaultValue:"https://media.istockphoto.com/photos/dog-watching-tv-on-the-couch-picture-id680810342?k=20&m=680810342&s=612x612&w=0&h=wQVeNcnq0CIqpGK88zA-pqmzbyK_6diiHR7kAq5PbxQ="
+
     },
-    createdInDb: {//para hacer una distincion es mas facil acceder al videogame creado en db--
+    createdInDb: {//para hacer una distincion 
       type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: true

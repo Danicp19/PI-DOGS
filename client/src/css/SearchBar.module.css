@@ -21,6 +21,7 @@
     transition-duration: 0.5s;
     height: 50px;
 }
+
 .button:hover {
     background-color:#8265E6;
     color:  #000300; 
