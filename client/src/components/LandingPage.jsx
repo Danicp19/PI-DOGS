@@ -9,7 +9,7 @@ export default function LandingPage(){
         <div className={s.background}>  
        
             <Link to ="/home">
-                <button className={s.LandingButton}>   x </button>
+                <button className={s.LandingButton}></button>
             </Link>
         </div>
     )
